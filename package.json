@@ -1,0 +1,49 @@
+{
+  "name": "clay-resource-entity",
+  "version": "1.0.0",
+  "description": "Entity exetensions for Clay-Resource",
+  "main": "lib",
+  "scripts": {
+    "test": "node ./ci/test.js",
+    "prepare": "node ./ci/build.js && node ./ci/shim.js"
+  },
+  "repository": "realglobe-Inc/clay-resource-entity",
+  "keywords": [
+    "ClayDB"
+  ],
+  "author": {
+    "name": "Taka Okunishi",
+    "email": "okunishinishi@gmail.com",
+    "url": "http://okunishitaka.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/realglobe-Inc/clay-resource-entity/issues"
+  },
+  "homepage": "https://github.com/realglobe-Inc/clay-resource-entity#readme",
+  "dependencies": {
+    "clay-entity": "^2.0.1",
+    "clay-resource-name": "^4.0.1",
+    "co": "^4.6.0"
+  },
+  "devDependencies": {
+    "ababel": "^2.0.1",
+    "ababel-es2015": "^2.0.1",
+    "amocha": "^2.0.0",
+    "ape-doc": "^2.0.4",
+    "ape-formatting": "^1.0.2",
+    "ape-releasing": "^4.0.4",
+    "ape-tasking": "^4.0.9",
+    "ape-tmpl": "^5.0.20",
+    "ape-updating": "^4.1.0",
+    "clay-driver-memory": "^4.0.1",
+    "clay-resource": "^3.0.7",
+    "coz": "^6.0.20",
+    "injectmock": "^2.0.0",
+    "sugos-travis": "^2.0.7"
+  },
+  "engines": {
+    "node": ">=6",
+    "npm": ">=4"
+  }
+}
