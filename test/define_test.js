@@ -50,6 +50,16 @@ describe('define', function () {
     yield user01.destroy()
 
     ok(!(yield User.one(user01.id)))
+
+    {
+      let caught
+      try {
+        yield user01.update({ foo: 'bar' })
+      } catch (e) {
+        caught = e
+      }
+      ok(caught)
+    }
   }))
 })
 
