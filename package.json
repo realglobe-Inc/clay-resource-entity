@@ -16,7 +16,7 @@
     "email": "okunishinishi@gmail.com",
     "url": "http://okunishitaka.com"
   },
-  "license": "MIT",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/realglobe-Inc/clay-resource-entity/issues"
   },
@@ -37,7 +37,7 @@
     "ape-tmpl": "^5.0.20",
     "ape-updating": "^4.1.0",
     "clay-driver-memory": "^4.0.1",
-    "clay-resource": "^3.0.7",
+    "clay-resource": "^3.0.8",
     "coz": "^6.0.20",
     "injectmock": "^2.0.0",
     "sugos-travis": "^2.0.7"

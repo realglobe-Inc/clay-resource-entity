@@ -124,7 +124,7 @@ Available functions
 
 License
 -------
-This software is released under the [MIT License](https://github.com/realglobe-Inc/clay-resource-entity/blob/master/LICENSE).
+This software is released under the [Apache-2.0 License](https://github.com/realglobe-Inc/clay-resource-entity/blob/master/LICENSE).
 
 <!-- LICENSE End -->
 
