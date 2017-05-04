@@ -26,6 +26,13 @@ describe('define', function () {
     let Org = fromDriver(driver, 'Org')
     let User = fromDriver(driver, 'User')
 
+    User.policy({
+      name: {
+        type: 'STRING',
+        unique: true
+      }
+    })
+
     let UserEntity = define(User)
     let OrgEntity = define(Org)
 
