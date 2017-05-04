@@ -47,6 +47,10 @@ describe('define', function () {
 
     equal(user01.foo, 'bar')
 
+    user01.baz = 'This is baz'
+
+    yield user01.save()
+
     yield user01.destroy()
 
     ok(!(yield User.one(user01.id)))
