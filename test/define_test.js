@@ -5,23 +5,22 @@
 'use strict'
 
 const define = require('../lib/define.js')
-const { fromDriver } = require('clay-resource')
+const {fromDriver} = require('clay-resource')
 const clayDriverMemory = require('clay-driver-memory')
-const { equal, ok } = require('assert')
-const co = require('co')
+const {equal, ok} = require('assert')
 
 describe('define', function () {
   this.timeout(3000)
 
-  before(() => co(function * () {
+  before(async () => {
 
-  }))
+  })
 
-  after(() => co(function * () {
+  after(async () => {
 
-  }))
+  })
 
-  it('Define', () => co(function * () {
+  it('Define', async () => {
     let driver = clayDriverMemory({})
     let Org = fromDriver(driver, 'Org')
     let User = fromDriver(driver, 'User')
@@ -36,42 +35,42 @@ describe('define', function () {
     let UserEntity = define(User)
     let OrgEntity = define(Org)
 
-    let org01 = new OrgEntity(yield Org.create({ name: 'org01' }))
-    let user01 = new UserEntity(yield User.create({ name: 'user01', org: org01 }))
+    let org01 = new OrgEntity(await Org.create({name: 'org01'}))
+    let user01 = new UserEntity(await User.create({name: 'user01', org: org01}))
 
     equal(user01.get('name'), 'user01')
 
-    yield User.update(user01.id, { vr: 2 })
+    await User.update(user01.id, {vr: 2})
 
-    user01.set({ tested: true })
+    user01.set({tested: true})
 
-    yield user01.sync()
+    await user01.sync()
 
     equal(user01.get('vr'), 2)
     equal(user01.tested, true)
 
-    yield user01.update({ foo: 'bar' })
+    await user01.update({foo: 'bar'})
 
     equal(user01.foo, 'bar')
 
     user01.baz = 'This is baz'
 
-    yield user01.save()
+    await user01.save()
 
-    yield user01.destroy()
+    await user01.destroy()
 
-    ok(!(yield User.one(user01.id)))
+    ok(!(await User.one(user01.id)))
 
     {
       let caught
       try {
-        yield user01.update({ foo: 'bar' })
+        await user01.update({foo: 'bar'})
       } catch (e) {
         caught = e
       }
       ok(caught)
     }
-  }))
+  })
 })
 
 /* global describe, before, after, it */

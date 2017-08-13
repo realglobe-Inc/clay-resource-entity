@@ -1,6 +1,6 @@
 {
   "name": "clay-resource-entity",
-  "version": "1.0.5",
+  "version": "2.0.0",
   "description": "Entity exetensions for Clay-Resource",
   "main": "lib",
   "scripts": {
@@ -23,8 +23,7 @@
   "homepage": "https://github.com/realglobe-Inc/clay-resource-entity#readme",
   "dependencies": {
     "clay-entity": "^2.0.1",
-    "clay-resource-name": "^4.0.1",
-    "co": "^4.6.0"
+    "clay-resource-name": "^4.0.1"
   },
   "devDependencies": {
     "ababel": "^2.0.1",
@@ -37,13 +36,13 @@
     "ape-tmpl": "^5.0.20",
     "ape-updating": "^4.1.1",
     "clay-driver-memory": "^4.0.1",
-    "clay-resource": "^3.1.8",
+    "clay-resource": "^4.1.1",
     "coz": "^6.0.20",
     "injectmock": "^2.0.0",
     "sugos-travis": "^2.0.7"
   },
   "engines": {
-    "node": ">=6",
+    "node": ">=6.6",
     "npm": ">=4"
   }
 }
