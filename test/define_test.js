@@ -21,9 +21,9 @@ describe('define', function () {
   })
 
   it('Define', async () => {
-    let driver = clayDriverMemory({})
-    let Org = fromDriver(driver, 'Org')
-    let User = fromDriver(driver, 'User')
+    const driver = clayDriverMemory({})
+    const Org = fromDriver(driver, 'Org')
+    const User = fromDriver(driver, 'User')
 
     User.policy({
       name: {
@@ -32,11 +32,11 @@ describe('define', function () {
       }
     })
 
-    let UserEntity = define(User)
-    let OrgEntity = define(Org)
+    const UserEntity = define(User)
+    const OrgEntity = define(Org)
 
-    let org01 = new OrgEntity(await Org.create({name: 'org01'}))
-    let user01 = new UserEntity(await User.create({name: 'user01', org: org01}))
+    const org01 = new OrgEntity(await Org.create({name: 'org01'}))
+    const user01 = new UserEntity(await User.create({name: 'user01', org: org01}))
 
     equal(user01.get('name'), 'user01')
 
@@ -49,7 +49,7 @@ describe('define', function () {
     equal(user01.get('vr'), 2)
     equal(user01.tested, true)
 
-    await user01.update({foo: 'bar'})
+    await user01.update({name: user01.name, foo: 'bar'})
 
     equal(user01.foo, 'bar')
 
