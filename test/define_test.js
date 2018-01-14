@@ -70,6 +70,9 @@ describe('define', function () {
       }
       ok(caught)
     }
+
+    ok(user01.toObject())
+    equal(typeof user01.toObject().id, 'string')
   })
 })
 
