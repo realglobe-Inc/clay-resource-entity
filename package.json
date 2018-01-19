@@ -1,6 +1,6 @@
 {
   "name": "clay-resource-entity",
-  "version": "2.4.2",
+  "version": "2.5.0",
   "description": "Entity exetensions for Clay-Resource",
   "main": "lib",
   "scripts": {
@@ -26,7 +26,7 @@
     "clay-resource-name": "^4.0.3"
   },
   "devDependencies": {
-    "ababel": "^3.0.0",
+    "ababel": "^3.0.2",
     "ababel-es2015": "^2.0.1",
     "amocha": "^4.0.0",
     "ape-doc": "^2.0.4",
@@ -36,7 +36,7 @@
     "ape-tmpl": "^6.0.6",
     "ape-updating": "^4.1.1",
     "clay-driver-memory": "^4.1.7",
-    "clay-resource": "^5.4.14",
+    "clay-resource": "^5.5.1",
     "coz": "^6.0.20",
     "eslint": "^4.15.0",
     "injectmock": "^2.0.0",

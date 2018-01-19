@@ -56,6 +56,7 @@ describe('define', function () {
     user01.baz = 'This is baz'
 
     await user01.save()
+    await user01.resave()
 
     await user01.destroy()
 
