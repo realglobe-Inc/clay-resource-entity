@@ -58,6 +58,8 @@ describe('define', function () {
     await user01.save()
     await user01.resave()
 
+    equal(user01.toRef(), `User#${user01.id}`)
+
     await user01.destroy()
 
     ok(!(await User.one(user01.id)))
