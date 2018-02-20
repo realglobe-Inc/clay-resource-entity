@@ -1,6 +1,6 @@
 {
   "name": "clay-resource-entity",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "description": "Entity exetensions for Clay-Resource",
   "main": "lib",
   "scripts": {
