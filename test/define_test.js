@@ -53,6 +53,13 @@ describe('define', function () {
 
     equal(user01.foo, 'bar')
 
+    ok(user01.is(`User#${user01.id}`))
+    ok(!user01.is(`Org#${user01.id}`))
+    ok(user01.is({$ref: `User#${user01.id}`}))
+    ok(!user01.is(null))
+    ok(user01.is({$$as: 'User', id: user01.id}))
+    ok(!user01.is({$$as: 'Org', id: user01.id}))
+
     user01.baz = 'This is baz'
 
     await user01.save()
