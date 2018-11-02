@@ -22,23 +22,23 @@
   },
   "homepage": "https://github.com/realglobe-Inc/clay-resource-entity#readme",
   "dependencies": {
-    "clay-entity": "^2.1.6",
+    "clay-entity": "^2.1.9",
     "clay-resource-name": "^4.0.5",
-    "clay-resource-ref": "^2.0.6"
+    "clay-resource-ref": "^2.0.7"
   },
   "devDependencies": {
-    "ababel": "^5.0.5",
+    "ababel": "^5.0.6",
     "amocha": "^5.0.0",
     "ape-doc": "^2.0.4",
     "ape-formatting": "^1.0.2",
-    "ape-releasing": "^4.0.4",
+    "ape-releasing": "^5.0.0",
     "ape-tasking": "^4.0.9",
     "ape-tmpl": "^6.0.11",
     "ape-updating": "^5.0.1",
-    "clay-driver-memory": "^4.1.12",
-    "clay-resource": "^5.5.25",
+    "clay-driver-memory": "^4.1.13",
+    "clay-resource": "^5.5.28",
     "coz": "^7.0.2",
-    "eslint": "^5.4.0",
+    "eslint": "^5.8.0",
     "injectmock": "^2.0.0",
     "sugos-travis": "^2.0.7"
   },
